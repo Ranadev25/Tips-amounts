@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tips amount</title>
+  <link rel="shortcut icon" href="./img/favicon-32x32.png" type="image/x-icon">
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    .parsent-num-5:hover,
+    .parsent-num-10:hover,
+    .parsent-num-15:hover,
+    .parsent-num-25:hover,
+    .parsent-num-50:hover,
+    .resetbtn:hover{
+       background: #67e6db80;
+       transition: .5s;
+       cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+<div class="container-fluid bg-[#67e6db53]  pt-16 sm:pb-14 ">
+    <img src="./img/logo.svg" class="m-auto w-10 " >
+    <div class="sm:container sm:m-auto">
+      <div class="calculate bg-slate-50 container mt-12 p-5  rounded-2xl rounded-b-none sm:rounded-2xl grid sm:grid-cols-2 gap-8">
+        <div class="select-tips-section">
+          <div class="flex justify-between">
+            <label for="" class="bill">Bill</label>
+            <p class="input-error text-red-500 text-[10px]"></p>
+          </div>
+          <div class=" mt-2 bill-input relative mb-3">
+            <img src="./img/icon-dollar.svg" class="input-img absolute top-1 left-2 w-3 inline-block">
+            <input type="text" onfocus="selectBill()" class="select-bill h-7 w-[100%] pl-6 pr-16 border bg-slate-100">
+            <h3 class="input-text text-[#808080ba] absolute right-1 top-0.5 ">0</h3>
+          </div>
+          <label for="">Select Tips</label>
+          <div class="tips-parsent text-center text-white grid grid-cols-3 gap-3 mb-3 mt-2">
+            <div class="py-2 rounded bg-[#124d40] parsent-num-5" onclick="fivePersent()">5%</div>
+            <div class="py-2 rounded bg-[#124d40] parsent-num-10" onclick="tenPersent()">10%</div>
+            <div class="py-2 rounded bg-[#124d40] parsent-num-15" onclick="fifteenPersent()">15%</div>
+            <div class="py-2 rounded bg-[#124d40] parsent-num-25" onclick="twentyfivePersent()">25%</div>
+            <div class="py-2 rounded bg-[#124d40] parsent-num-50" onclick="fiftyPersent()">50%</div>
+    
+            <input type="number" class=" text-center font-semibold py-2 rounded bg-slate-200 text-black  parsent-custom w-[100%]" onclick="parsentCustom(event)" placeholder="Custom">
+            
+          </div> 
+          <div class="flex justify-between mt-6">
+            <label for="">Number of People</label>
+            <p class="text-red-500 people-error text-[10px]"></p>
+          </div>
+          <div class="people-input relative mb-3 mt-2">
+            <img src="./img/icon-person.svg" class="input-img absolute top-1.5 left-2 w-3 inline-block">
+            <input type="text" onclick="selectPerson()" class="select-person
+             h-7 w-[100%] pl-6 pr-16 border bg-slate-100">
+            <h3 class="input-text text-[#808080ba] absolute right-1 top-0.5 ">0</h3>
+          </div>
+        </div>
+        <div class="amount bg-[#124d40] p-5 rounded-2xl">
+          <div class="tip-amount flex justify-between items-center mb-8">
+            <span class="amount-info">
+              <h2 class="amount-text text-white text-[20px]">Tip Amount</h2>
+              <p class="person text-[#bbbbbaa2]">/ person</p>
+            </span>
+            <span class="money-tips text-[30px] text-[#079992] font-bold">$00.00</span>
+          </div>
+          <div class="total-amount flex justify-between items-center mb-8">
+            <span class="amount-info">
+            <h2 class="amount-text text-white text-[20px]">Total</h2>
+            <p class="person text-[#bbbbbaa2]">/ person</p>
+          </span>
+          <span class="money-total text-[30px] text-[#079992] font-bold">$00.00</span>
+          </div>
+          <button class="resetbtn mt-6 bg-[#079992] w-[100%] h-[50px] rounded-lg font-bold text-[20px] text-[#00000099]">RESET</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+</body>
+</html>
