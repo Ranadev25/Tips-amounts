@@ -7,6 +7,12 @@ const peopleError = document.querySelector(".people-error");
 const moneyTips = document.querySelector(".money-tips");
 const moneyTotal = document.querySelector(".money-total");
 const resetbtn = document.querySelector(".resetbtn")
+const fivepersent = document.querySelector(".parsent-num-5");
+const tenpersent = document.querySelector(".parsent-num-10");
+const fifteenpersent = document.querySelector(".parsent-num-15");
+const twentyfivepersent = document.querySelector(".parsent-num-25");
+const fiftypersent = document.querySelector(".parsent-num-50");
+const custompersent = document.querySelector(".parsent-custom");
 
 
 const persent = (text) => {
@@ -54,4 +60,9 @@ resetbtn.addEventListener("click", () => {
   location.reload()
 })
 
-
+fivepersent.addEventListener("click", fivePersent);
+tenpersent.addEventListener("click", tenPersent);
+fifteenpersent.addEventListener("click", fifteenPersent);
+twentyfivepersent.addEventListener("click", twentyfivePersent);
+fiftypersent.addEventListener("click", fiftyPersent);
+custompersent.addEventListener("click", parsentCustom);
